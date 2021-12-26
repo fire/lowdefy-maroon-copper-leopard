@@ -2,7 +2,23 @@
 lowdefy: 3.23.2
 name: Chibifire.com Starter
 
-pages:
+menus:
+  - id: default
+    links:
+      - id: 3d-format-tools
+        type: MenuLink
+        properties:
+          icon: AlertOutlined
+          title: New 3d file upload
+        pageId: 3d-format-tools
+      - id: welcome
+        type: MenuLink
+        properties:
+          icon: HomeOutlined
+          title: Home
+        pageId: welcome
+pages:  
+  - _ref: 3d_format_tools.yaml
   - id: welcome
     type: PageHeaderMenu
     properties:
