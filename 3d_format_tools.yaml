@@ -1,18 +1,51 @@
 id: 3d-format-tools
 type: PageHeaderMenu
 properties:
-  title: 3D Format tools # The title in the browser tab.
+  title: 3D Format tools
 layout:
-  contentJustify: center # Center the contents of the page.
+  contentJustify: center
 blocks:
-  - id: content_card
-    type: Card
+  - id: page_heading
+    type: Title
+    properties:
+      content: Upload a glTF2 file file.
+      level: 3
+  - id: file-title
+    type: TextInput
+    properties:
+      title: Title
+  - id: file-type
+    type: ButtonSelector
+    properties:
+      title: Upload type
+      options:
+        - glTF2
+        - FBX
+        - Godot Engine Scene
+        - Blender
+  - id: ticket_description
+    type: TextArea
+    properties:
+      title: Description
+  - id: reset_button
+    type: Button
     layout:
-      size: 800 # Set the size of the card so it does not fill the full screen.
-      contentGutter: 16 # Make a 16px gap between all blocks in this card.
-    blocks:
-      - id: page_heading
-        type: Title
-        properties:
-          content: Upload a glTF2 file file. # Change the title on the page.
-          level: 3 # Make the title a little smaller (an html `<h3>`).
+      span: 12 # Set the size of the button (span 12 of 24 columns)
+    properties:
+      title: Reset
+      block: true # Make the button fill all the space available to it
+      type: default # Make the button a plain button
+      icon: ClearOutlined
+    events:
+      onClick:
+        - id: reset
+          type: Reset
+  - id: submit_button
+    type: Button
+    layout:
+      span: 12
+    properties:
+      title: Submit
+      block: true
+      type: primary # Make the button a primary button with color
+      icon: SaveOutlined
