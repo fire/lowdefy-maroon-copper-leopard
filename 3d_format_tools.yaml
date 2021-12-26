@@ -12,10 +12,12 @@ blocks:
       level: 3
   - id: file-title
     type: TextInput
+    required: true
     properties:
       title: Title
   - id: file-type
     type: ButtonSelector
+    required: true
     properties:
       title: Upload type
       options:
@@ -25,6 +27,7 @@ blocks:
         - Blender
   - id: ticket_description
     type: TextArea
+    required: true
     properties:
       title: Description
   - id: reset_button
