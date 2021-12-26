@@ -52,3 +52,7 @@ blocks:
       block: true
       type: primary # Make the button a primary button with color
       icon: SaveOutlined
+    events:
+      onClick:
+        - id: validate
+          type: Validate
